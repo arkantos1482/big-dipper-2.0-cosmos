@@ -102,6 +102,12 @@ const ChainIcon = ({
   let [iconDark, iconLight] =
     type === 'icon' ? [baseIconLight, baseIconLight] : [baseLogoLight, baseLogoLight];
   switch (chainName) {
+    case 'bita':
+      [iconDark, iconLight] =
+        type === 'icon'
+          ? [agoricIconLight, agoricIconLight]
+          : [agoricLogoLight.src, agoricLogoLight.src];
+      break;
     case 'agoric':
       [iconDark, iconLight] =
         type === 'icon'
